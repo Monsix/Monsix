@@ -1,0 +1,17 @@
+Las imágenes asociadas a esta tarea estarán en la carpeta llamada "7. Kernel"
+
+Se nos propuso actualizar el Kernel de nuestras máquinas el día 31 de Diciembre.
+
+Para ello, como hago para todo lo Linux que tenemos que hacer, creé la máquina virtual de la imagen 1: un clon de la máquina usada para la anterior práctica. Hago esto para evitar fallos catastróficos y perder todo lo avanzado hasta ese momento.
+
+Con esta nueva máquina iniciada, buscamos los archivos necesarios para actualizar Kernel y para ellos buscamos en Mainline, como se ve en la imagen 2.
+
+Para saber cuáles descargar, miramos el Kernel que tenemos actualmente y su arquitectura, imagen 3.
+
+Sabiendo los que necesitamos, procedemos a buscar una versión que nos convenza, en nuestro caso la 5.8.18 por temas de estabilidad. Descargamos los 4 archivos señalados en la imagen 4.
+
+Para instalar estos paquetes, abrimos la terminal y vamos hacia la ruta de la carpeta Descargas, donde se han bajado y una vez en la ruta, procedemos a instalar los paquetes como se ve en la imagen 5.
+
+Por último, tras instalar, reinciamos la máquina y comprobamos que todo funciona correctamente y se ha actualizado a la versión deseada. Imagen 6.
+
+Fin de este log.

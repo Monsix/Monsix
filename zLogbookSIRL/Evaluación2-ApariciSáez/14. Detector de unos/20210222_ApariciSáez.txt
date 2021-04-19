@@ -1,0 +1,12 @@
+Las imágenes asociadas a esta tarea estarán en la carpeta llamada "14. Detector de unos"
+
+Se nos propuso hacer un circuito que detectase secuencias de 3 unos y lo mostrase en un cronograma.
+Para ello tuvimos que cambiar de programa y empezar a usar Digital.exe
+
+El ejercicio es bastante complicado y no lo entendemos del todo. Además, a todos nos ocurre que el cronograma marca una cosa pero el visualizador de funciones otra, así que no sabemos si se comporta como debe de hacerlo o no.
+
+A pesar de haber copiado el ejercicio, no conseguimos entenderlo y mucho menos cuando recibimos 2 cosas diferentes en los visualizadores.
+
+Habrá que darle más vueltas...
+
+Fin de este log.

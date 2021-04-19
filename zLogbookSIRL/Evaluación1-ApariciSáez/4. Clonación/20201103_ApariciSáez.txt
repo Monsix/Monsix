@@ -1,0 +1,73 @@
+Las imágenes para esta tarea son las de la carpeta llamada "4.Clonación".
+
+Para todas las tareas anteriores, lo que hice fue avanzar en cada paso y al terminar, clonar la máquina virtual y sus discos para así poder volver a atrás en caso de haber hecho algún paso mal o querer repetir la tarea.Esto corresponde con la Imagen 1.
+
+Además de eso, para esta tarea concreta, la tarea de Clonezilla, lo primero que voy a hacer va a ser crear nuevos discos vacíos, como se ve en la imagen 2. Estos discos los voy a usar para hacer todas las copias de seguridad y restauración necesarias para la tarea.
+
+Esto es: "6 Restaurar" será el disco que clonaremos entero y solo su partición de /sistema para después cargarnos /sistema y recuperarla con la copia creada.
+
+"Nuevo arranque" será para comprobar que restaurar un clon sobre un disco vacío funciona y arranca sin problemas.
+
+"Pequeño95" será un disco de menor tamaño que esaremos en la siguiente parte (Restauración)
+
+Y por último, "Volcado de imágenes" será un disco muy grande donde irán todas las copias que saquemos del disco "6 Restaurar". Será nuestro almacén de copias de seguridad.
+
+En todas ellas hice un duplicado, igual que para las máquinas, para tener un punto anterior al que volver en caso de que haya algún problema grave que haga fallar la tarea.
+
+Una vez hecho esto, arrancamos la máquina con la .iso de Clonezilla y seleccionamos la opción "To RAM" como se ve en la Imagen 3.
+
+El siguiente paso es seleccionar el idioma, Imagen 4, y mantener o no la distribución del teclaro, Imagen 5.
+En este caso, no hace falta cambiar la distribución porque realmente no vamos a necesitar escribir nada, solo seleccionar opciones.
+
+Hecho esto, nos aparece el primer menú de Clonezilla donde nos pregunta qué modo vamos a usar. Imagen 6. Esto es si queremos disco-imagen, disco-disco o remoto. En este caso, vamos a salvar varias imagenes al disco "Volcado de imágenes" así que seleccionamos disco-imagen.
+
+Después, en la Imagen 7, tenemos que seleccionar en qué disco se encuentra o encontrará la imagen y seleccionamos dispositivo-local porque queremos que se guarde en "Volcado de imágenes".
+
+Cuando seleccionamos dispositivo-local, el programa nos dice que va a comprobar todos los discos y unidades externas y que si no están conectados ahora, que lo hagamos. Imagen 8.
+
+Cuando lo comprueba, Imagen 9, vemos que nos ha detectado 2 discos. SDA y SDB. SDA es el disco que queremos clonar, y SDB es "Volcado de imágenes". Si no estuviera el disco que buscamos, habría que volver a empezar y ver qué ha ocurrido.
+
+Ahora debemos de seleccionar el disco Destino donde se guardará o cogerá la imagen y seleccionamos SDB1 porque queremos guardar un clon de SDA entero en "Volcado de imágenes". Imagen 10.
+
+Después, hay que seleccionar el directorio dentro de SDB, y vamos a pasar ya que queremos la imagen en la misma raiz del disco. Imagen 11.
+
+Una vez hecho esto, pasamos a la Imagen 12 y seleccionamos el Modo de Ejecución Experto para tener más opciones disponibles.
+
+Seleccionamos guardar-disco, ya que vamos a clonar todo el SDA entero en SDB1. Imagen 13.
+
+En Imagen 14, nombramos la imagen que se va a generar.
+
+En Imagen 15, seleccionamos el disco de origen. Solo nos sale SDA porque SDB ya está cogido como Destino y solo queda 1, SDA. Además, como hemos elegido guardar-disco, nos coge SDA completo y no solo sus particiones.
+
+En Imagen 16, elegimos el modo de clonación a usar. Elegimos Partclone para este caso.
+
+En Imagen 17, vemos que hay un montón de opciones que se pueden habilitar/deshabilitar a la hora de crear la imagen.
+Lo dejaremos tal cual esta.
+
+En Imagen 18, vemos todos los niveles de compresión de la imagen. Vamos a seleccionar la primera de todas, que es la de mayor nivel de compresión. Así, la imagen generada pesará mucho menos. Pasa de un sistema Xubuntu de 10-12GB a tan solo una imagen de 4-5GB.
+
+En Imagen 19, seleccionamos el tamaño en MB del archivo de imagen generado. En este caso lo dejamos en 4GB por defecto.
+
+En Imagen 20, seleccionamos la Comprobación del sistema de archivos ANTES de clonar, para comprobar que todo esté en orden y no tenga errores.
+
+En Imagen 21, igual que en el paso anterior, seleccionamos si queremos o no que comprueba la imagen generada al terminar, para ver si se ha hecho correctamente o ha ocurrido un error.
+
+En la Imagen 22, podemos elegir cifrar o no la imagen generada. Vamos a omitir este paso ya que no nos hace falta cifrar la iamgen.
+
+Por último, en Imagen 23, elegimos qué hacer al terminar todo el proceso. Podemos elegir, apagar, reiniciar o meter comandos para seguir usando Clonezilla. Seleccionamos Elegir.
+
+Ya habríamos seleccionado todas las posibles opciones de Clonezilla para hacer esta copia de seguridad y se nos ha generado una linea de comandos, Imagen 24, que equivale a todos los pasos y selecciones que hemos hecho anteriormente. Podríamos haber metido esa linea de comandos y haber hecho directamente la clonación del disco SDA al SDB1.
+
+Cuando continuamos, antes de empezar( Imagen 25), nos hace una comprobación y resumen de lo que va a hacer a continuación.
+En este caso, va a clonar el SDA completo (con SDA1, SDA5 Y SDA6) en SDB1.
+Si por lo que sea vieramos que no está cogiendo todo, o aparece un nombre de disco que no debería ser, algo ha fallado o hemos hecho mal y antes de comenzar, deberíamos abortar y volver a empezar para hacerlo bien.
+
+Si todo está correcto, Imagen26,  iniciamos y esperamos unos 15 minutos a que se haga todo y al terminar nos aparecen las opciones que elegimos en la Imagen 23. Y como ya hemos acabado con esta parte, seleccionamos Apagar.
+
+Con todo esto, hemos conseguido clonar todo el sistema de archivos de SDA (Imagen 27 que muestra los comandos).
+
+Ahora, faltaría repetir el proceso para clonar todo el sistema de archivos pero con el modo de clonación DD que clona sector a sector (Imagen 28). Este proceso es exactamente igual, pero eligiendo DD en el paso de la Imagen 16. 
+Y por último, solo la parte de /Sistema (Imagen 29). Esto se consigue seleccionando guardar-parte en el paso de la Imagen 13 en vez de guardar-disco. Esto hará que en el paso de la Imagen 15 nos aparezcan para seleccionar todas las particiones del disco SDA y seleccionemos solo SDA5, que es la que contiene la partición de /Sistema.
+
+
+Con esto finalizamos el log de esta tarea.

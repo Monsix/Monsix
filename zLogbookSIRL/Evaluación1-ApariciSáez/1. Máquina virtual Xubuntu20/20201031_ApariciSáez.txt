@@ -1,0 +1,29 @@
+Hoy he decidido borrar todo lo que tenía hecho y empezar desde 0 el log.
+
+Como necesitamos documentar el proceso con capturas y algunas de las tareas requieren de ejecutar programas mientras la máquina está sin iniciar, voy a comenazar por crear una Máquina virtual de Xubuntu20 con VirtualBox y trabajar las tareas con eso en vez de usar el sistema Linux nativo en partición o segundo disco duro.
+
+Así que voy a contar cómo he creado la máquina virtual:
+
+Descargamos la última versión de VirtualBox y los Extras.
+Iniciamos el proceso de creación de una nueva máquina virtual y seguimos los pasos que nos indica.
+Al final, obtenemos una máquina con las caracterísiticas que se muestran en la imagen 1 de la carpeta "1. Máquina virtual Xubuntu20".
+Le he puesto 4 procesadores, 4gb de RAM y 80gb de espacio en disco para funcione sin problemas.
+
+El siguiente paso es añadirle el reconocimiento de USBs como se ve en la imagen 2. Así la máquina los reconocerá cuando nos pongamos a hacer las siguientes tareas (Clonación/Restauración y Mover el directorio /Home).
+
+Una vez hecho esto, procedemos a iniciar la máquina que, como se puede ver en la imagen 3, no tiene aún el SO puesto y nos pide localizar la .iso. Seleccionamos la .iso de Xubuntu20 de 64bits que tenemos descargarda en nuestro ordenador.
+
+Al iniciar, como se ve en la imagen 4, hará una comprobación de integridad de los archivos de la .iso para ver que no haya errores.
+
+Cuando termina la comprobación, comienza el proceso de instalación o prueba de Xubuntu. Nosotros seleccionamos Instalación, elegimos el idioma y distribución del teclado en Español y entonces nos aparece una pantalla de "Actualización y otro software"(imagen 5). Este paso descarga e instala actualizaciones de Xubuntu para ahorrar tiempo después de la instalación. Además, nosotros hemos seleccionado que instale programas de terceros. Tarda un poco más pero tendremos el SO al día.
+
+El siguiente paso, imagen 6, es elegir qué hacer con el disco. En nuestro caso, seleccionamos Borrar e Instalar ya que nuestro disco virtual no tiene nada y nos da igual borrarlo. Si por lo que sea tuvieramos algo, elegiriamos Más opciones y particionaríamos. Tras aceptar, nos muestra cómo quedará particionado el disco virtual (imagen 7).
+
+Por último, imagen 8, hay que nombrar la máquina, crear el usuario y ponerle una contraseña. En nuestro caso, elegimos además que inicie sesión automáticamente y así no tener que meter el usuario al iniciar la máquina.
+
+Ahora comienza la instalación real del SO, imagen 9, donde copiará archivos de la .iso y además descargará las actualizaciones y controladores necesarios que le marcamos en la imagen 5.
+
+Tras unos 10-15 minutos terminará la instalación y nos pedirá reiniciar la máquina para finalizar la instalación.
+Al reiniciar, comprobamos que tenemos la máquina virtual creada y funcionando con el SO. Imagen 10.
+
+Con esto finalizamos el log de esta tarea.

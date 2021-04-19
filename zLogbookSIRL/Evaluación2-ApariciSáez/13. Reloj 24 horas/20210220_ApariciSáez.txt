@@ -1,0 +1,15 @@
+Las imágenes asociadas a esta tarea estarán en la carpeta llamada "13. Reloj 24 horas"
+
+Se nos propuso hacer un Reloj 24 horas que mostrase horas, minutos y segundos.
+
+Para ello comencé a hacer varias pruebas creando contadores de 4 bits y uniendo las salidas a varios displays hexadecimales.
+
+El primer intento que conseguí completamente operativo es el de la imagen 1. Pero no me convencía asi que decidí mejorarlo y conseguí el de la imagen 2.
+
+El reloj se comporta de forma asíncrona de tal manera que solo llega una señal de reloj al primer contador del primer display (por la derecha) y antes de pasar de 9 a 10, se reincia y manda un tick de reloj al siguiente contador, mostrando decenas. Eso para los Segundos, pero ocurre lo mismo con los minutos.
+
+El caso especial son las horas, que solo pueden llegar hasta 24 (23 en realidad). Al llegar a 23:59:59, el último tick hace que todo se ponga a 00:00:00. Los minutos y segundos se resetean de por si. Mi reset ocurre solo en las horas.
+
+En la imagen 2 se ve mejor lo que hago para que ocurra. Conecto 2 puertas AND a otra puerta AND para que solo cuando uno marque 2 y el otro 4 se envíe una señal de 1 al Reset y ambos se pongan a 0.
+
+Fin de este log.

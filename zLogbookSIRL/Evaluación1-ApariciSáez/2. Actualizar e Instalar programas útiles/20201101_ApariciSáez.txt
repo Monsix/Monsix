@@ -1,0 +1,19 @@
+Hoy voy a iniciar Xubuntu y ver si hay actualizaciones que instalar además de buscar programas útiles para instalarle. Por ejemplo GParted.
+
+Las capturas de este proceso irán en la carpeta llamada "2. Actualizar e Instalar programas útiles".
+
+Una vez iniciada la máquina, abrimos una Terminal. Podemos buscarla en el menú o usar la tecla Host+T y nos aparecerá como se ve en la imagen 1.
+
+Con la terminal abierta, introducimos los comandos que se ven en la imagen 2. Los comandos los hemos puesto todos seguidos con ";" para que los haga uno detrás de otro y así se haga todo de una. Tras meter la contraseña, empezará a actualizar los indices de repositorios e instalar las actualizaciones que haya.
+
+Durante el proceso, como se ve en la imagen 3, puede ser que nos informe de que se instalarán X paquetes y tenemos que confirmar o rechazar. Obviemente, le daremos que si.
+
+Ahora que hemos terminado de actualizar el SO, vamos a buscar el GParted y para ello introduciremos el comando que se ve en la imagen 4. Lo buscará en el listado de repositorios que hemos actualizado en el paso anterior y nos instalará el programa.
+
+Este siguiente paso es opcional pero viene bien hacerlo de vez en cuando para eliminar paquetes antiguos de instalación/actualización. Con los comandos de la imagen 5, conseguimos que busque esos paquetes que ya no hacen falta y los borre ahorrando así espacio en disco. El único "problema" sería que en un futuro los necesitara, pero simplemente los volvería a descargar así que no pasa nada.
+
+Por último, iniciamos GParted para ver que se ha instalado correctamente. Nos pedirá contraseña ya que es un programa que además de darnos información sobre nuestros discos y particiones, nos permite crear nuevas particiones o borrar las ya existentes.
+
+Como vemos en la imagen 6, Xubuntu20 crea una particion de arranque  y luego una extendida donde va el resto del sistema. Esto será una futura práctica donde tendremos que separar el /Home y después hacer la clonación de todo el disco con Clonezilla.
+
+Con esto finalizamos el log de esta tarea.

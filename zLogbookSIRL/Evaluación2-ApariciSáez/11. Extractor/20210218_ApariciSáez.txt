@@ -1,0 +1,10 @@
+Las imágenes asociadas a esta tarea estarán en la carpeta llamada "11. Extractor"
+
+Se nos propuso hacer un extractor de aire según el nivel de calidad del aire.
+El circuito de la imagen 1 iba introduciendo los posibles valores de calidad de aire y el circuito extractor actuaba de una u otra manera según fuera Saludable, Molesto, Viciado o Nocivo.
+
+Según el nivel, se mostraba por un semáforo de colores que un ventilador actuaba para reciclar el aire.
+El sistema era alternante, por lo que un ventilador que habia actuado antes, ahora descansaba.
+Además, si se llegaba a Nocivo, se encendían 2 ventiladores y se purgaba el aire volviendo al nivel Saludable.
+
+Fin de este log.

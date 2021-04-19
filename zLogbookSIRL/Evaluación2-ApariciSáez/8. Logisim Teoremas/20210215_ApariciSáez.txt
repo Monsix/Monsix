@@ -1,0 +1,12 @@
+Las imágenes asociadas a esta tarea estarán en la carpeta llamada "8. Logisim Teoremas"
+
+Para aprender el manejo del programa Logisim Evolution y comprender el tema de puertas lógicas se nos propuso revisar el apartado de Teoremas Lógicos del libro de muestras AESI.
+
+Para ello fuimos 1 a 1 mirando todos los teoremas y pasándolos a circuitos lógicos con el programa.
+En total, hice 12 circuitos para cada uno de los teoremas. Imagen 1.
+
+Además de eso, había un último ejercicio llamado Caritas, para implementar de otra forma diferente a la que venía en el ejemplo. Imagen 2.
+
+Práctica muy útil para conocer el funcionamiento de las puertas lógicas y probar a hacer cosas nuevas.
+
+Fin de este log.

@@ -1,0 +1,45 @@
+RESTAURACIÓN
+
+Las imágenes para esta tarea son las de la carpeta llamada "5.Restauración".
+
+Esta tarea se compone de 3 partes:
+Primero, formatearemos /Sistema y después la restauraremos con la imagen que hicimos en la tarea anterior.
+Segundo, clonaremos el disco a otro nuevo para ver si arranca sin problemas. También lo haremos restaurando la imagen completa y comparar los tiempos.
+Tercero, clonar un disco de mayor tamaño en otro menor. Obviamente dará un fallo y habrá que solucionarlo.
+
+Para esta Primera Parte, iniciamos la .iso de Gparted Live en el modo "to RAM"(Imagen 1) ya que necesitamos formatear una de las particiones para luego restaurarla con Clonezilla. Esto es, formatear SDA5, la partición que contiente /Sistema.
+
+Seleccionamos el teclado en español standard como se ve en la Imagen 2 y seleccionamos el idioma 25, español, como se ven en la Imagen 3.
+
+Con Gparted Live iniciado, vemos los discos como estan antes de formatear /Sistema. Imagen 4.
+
+Después seleccionamos SDA5 y la formateamos como se ve en Imagen 5.
+
+Tras aplicar los cambios y espera a que los haga, la partición SDA5 queda formateada como se ve en la Imagen 6. Lo que antes eran casi 10GB de archivos, ahora son 500MB.
+
+Hecho esto, cerramos y volvemos a arrancar con Clonezilla. Vamos seleccionando opciones hasta llegar a la Imagen 7, donde en vez de guardar-disco o guardar-parte, esta vez lo que queremos es Restaura-Parte.
+
+En la Imagen 8 vemos las imagenes que tenemos guardadas en nuestro disco "Volcado de imágenes". Aparecen las 3 que hicimos anteriormente, y la que seleccionamos es la que contiene solo la partición de sistema.
+
+En la Imagen 9, nos pide seleccionar la partición a restaurar y como hemos elegido la imagen de sistema, solo nos aparece SDA5.
+
+En la Imagen 10, nos aparece la tabla de particiones que tiene el disco SDA y seleccionamos el objetivo de la restauración, que es la SDA5. Esto lo que hará es restaurar la SDA5 de la copia de seguridad sobre la SDA5 que es una partición formateada sin nada dentro.
+
+En la Imagen 11, nos preguntará qué queremos hacer con la tabla de particiones. Vamos a seleccionar que no la cree y por consiguiente, se use la que tiene el propio disco ya.
+
+Una vez hecho todo esto y tras esperar unos 5 minutos, reiniciamos la máquina y volvemos a arrancar Xubuntu para comprobar que la máquina arranca sin problemas tras haber restaurado /Sistema. Imagen 12.
+
+Con esto concluye el primer apartado.
+
+Para el segundo apartado, solo tenemos que volver a iniciar Clonezilla y navegar hasta llegar a Restaurar-Disco y después seleccionar la imagen que contenía todo el disco sector por sector. Tras hacer esto, tardará bastante porque tiene que descomprimir la imagen, leerla, copiar los archivos y clonarlos en el disco vacío de destino. Y como es todo el disco y sector a sector, va a tardar bastante. Imagen 13.
+
+Despues de eso, vamos a probar a hacer lo mismo, pero esta vez es un clonado disco a disco. Para ello, debemos seleccionar en los primeros pasos la opción disco-disco en vez de disco-imagen. Esto hará que directamente clone sector a sector el disco de nuestro Xubuntu a un disco vacío nuevo. El proceso será mucho más rápido que en el caso anterior ya que directamente lee y copia en vez de tener que descomprimir imagen y leer de ahi. Además, nos ahorramos el tiempo de tener que haber creado la imagen previamente, por lo que el proceso son unos 15 minutos mientras que el anterior eran en total 40 minutos. Imagen 14.
+
+Por último, queda la tercera parte de esta tarea: clonar un disco mayor en uno menor, y solucionar el error ya que no va a caber.
+
+Vamos a tener que volver a arrancar con Gparted Live y redimensionar la partición extendida SDA2 de 111GB a 90, para que pueda entrar en el nuevo disco de menor tamaño. Imagen 15.
+Lo que haremos será rebajar cada una de las particiones que tenemos y luego reordenalas para que no haya huecos de espacio sin asignar entre ellas. Con eso, podemos aplicar todos los cambios y la partición SDA2 pasa pesar solo 90GB, por lo que cabrá en nuestro disco llamado"Pequeño95". Imagen 16.
+
+Volvemos a Clonezilla y volvemos a seleccionar el modo disco a disco donde ahora si que va a funcionar. Imagen 17.
+
+Con esto finalizamos el log de esta tarea.

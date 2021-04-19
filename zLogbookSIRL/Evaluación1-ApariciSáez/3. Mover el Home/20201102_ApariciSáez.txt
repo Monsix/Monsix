@@ -1,0 +1,53 @@
+Hoy vamos a intentar mover el /Home en el SO de la máquina virtual. Es un proceso complicado con varios reinicios que esperamos que funcionen bien y no de problemas en la máquina virtual.
+
+Las capturas de este proceso irán en la carpeta llamada "3. Mover el Home".
+
+Lo primero es buscar la .iso de Gparted Live y como lo estamos haciendo sobre máquina virtual la añadimos desde configuración. Si no, tendríamos que crearla con Rufus como hemos hecho anteriormente.
+
+Yo he optado por clonar la maquina virtual que hice y trabajar sobre ella para no perder la máquina en caso de que algo falle.
+
+Una vez tenemos la máquina iniciada, vamos a seguir el tutorial de "lavidaestux" y el primer paso es conseguir la UUID del disco/partición que vamos a mover. Para ello usamos el comando de la imagen 1 y anotamos el UUID.
+
+Después, toca reiniciar la máquina y arrancar con GParted Live para particionar el disco. Elegimos la opción para trabajar sobre la memoria RAM y así borre todo al cerrar como se ve en la imagen 2.
+
+Después toca seleccionar la distribución del teclado y el idioma como se ve en las imagenes 3, 4 y 5. Esto es muy importante ya que vamos a tener que escribir símbolos como / y * que si no tenemos bien la distribución de teclado, estarán en teclas diferentes a las que vemos nosotros y sería un caos.
+
+Una vez iniciado, nos encontramos ese entorno gráfico de la imagen 6. Son un conjunto de herramientas para usar GParted, sacar capturas de pantalla y acceder a la terminal.
+
+Automáticamente nos ha abierto GParted (y si no, le damos doble click) y comenzamos el redimensionamiento de sda5 a 60GiB (61440MiB) y la creación sda6 que llamaremos casa con sistema de archivos ext y tamaño 40GiB (40960MiB). También una partición swap de 8GiB (8192MiB). Nos queda todo como se ven en la imagen 7. Nos ha quedado espacio sin asignar que ha sobrado por los tamaños de partición que hemos hecho arriba. Podríamos haberlo incluido en el nuevo Home o en la partición original. Por último, aplicamos los cambios y al finalizar nos va a dar la opción de guardar un archivo .htm con los detalles del proceso.
+
+Usando la capturadora de gparted-live hemos hecho capturas del antes y después del proceso. Imagen 8.
+
+Para poder guardar estas imagenes, hemos tenido que montar el pendrive como se ven en la imagen 9 y después copiarlo en el pendrive como se ve en la imagen 10. Este proceso lo hemos hecho 2 veces, con el antes y el después. Copiamos el archivo del antes porque la nueva captura del después se va a sobreescribir y si no lo hacemos se pierde.
+
+La imagen 11 es el proceso de partición ya finalizado. Habrá una captura nativa del antes y después en la entrega de la tarea en Aules.
+
+Además de haber copiado las 2 capturas al pen, también debemos copiar el archivo de los detalles del proceso y usamos el mismo comando pero esta vez no le cambiamos el nombre al archivo. Imagen 12.
+
+Una vez terminado todo esto, toca volver a nuestra máquina con Xubuntu20 y para ellos desmontamos el pen y reiniciamos. Imagen 13.
+
+Tras reiniciar (imagen 14), vemos en GParted que el sistema de archivos está bien. Estan todas las particiones que hemos creado y por el momento las considera como discos aparte en vez de particiones. Por eso no tienen el icono de la llave. No estan cogidos por el sistema.
+
+
+El siguiente caso es crear una copia de seguridad Home. En nuestro caso, home está completamente vacía y solo tiene carpetas. Esto se hace en caso de que Home sea de una maquina en uso y haya datos importantes que salvar. Igualmente, vamos a crearla como se ve en la imagen 15. Creamos un directorio y le copiamos el contenido de Home, con * para que conserve la estructura de los datos.
+
+Una vez hecha la copia de seguridad,  creamos un directorio nuevo en /mnt para montar y copiar ahi nuestro home. Imagen 16. (se ve un error porque escribí suco en vez de sudo)
+
+En la imagen 17, hemos listado el contenido de la copia del nuevo home para comprobar que todo lo ha copiado bien.
+Y repetimos, no hay archivos porque es una copia limpia de Xubuntu sin uso alguno, por lo que no hay realmente datos que salvar en home salvo la estructura de las carpetas.
+
+Una vez copiado y verificado, desmontamos la unidad como se ven en la imagen 18.
+
+Ahora es cuando viene el paso crucial que puede ser fatal para nuestra máquina: modificar el archivo fstab. En la imagen 19 lo abrimos y eso es lo que nos encontramos.
+
+En la imagen 20, le hemos añadido las lineas correspondientes a sda6 y sda7 que son el nuevo home y la particion swap, respectivamente.
+
+Tras guardar y cerrar, en la terminal comprobamos que el archivo fstab se ha modificado y entonces reiniciamos. Imagen 21.
+
+Cuando se vuelve a iniciar la máquina, tarda un poco más de lo normal ya que está comprobando y cargando el nuevo sistema de archivos. Imagen 22.
+
+Ahora solo falta borrar la copia de seguridad que hicimos de Home y el directorio temportal en /mnt. Usamos los comandos de la imagen 23 y se elimina.
+
+Por último, en la imagen 24, vamos a comprobar que el sistema pesa menos al eliminar la copia de seguridad, pero como dijimos anteriormente, nuestro Xubuntu sin uso no ha generado ningun archivo más allá de la estructura de carpetas por lo que no observamos una reducción de tamaño.
+
+Con esto finalizamos el log de esta tarea.

@@ -1,0 +1,12 @@
+Las imágenes asociadas a esta tarea estarán en la carpeta llamada "10. Kitt"
+
+Se nos propuso hacer el sistema de luces del famoso Coche Fantástico, Kitt.
+Son 8 lámparas con 3 luces corriendo de un extremo al otro.
+
+Para ello, montamos el circuito de la Imagen 1, con 8 lámparas unido al circuito Kitt, que con cada tick de reloj fuera mostrando las 3 luces en el siguiente LED hasta llegar al final y volver.
+
+Para ello, creamos un contador de 5 bits asíncrono, Imagen 2.
+
+Me hubiera gustado mejorarlo e incluir más cosas, pero no hay tiempo. Tengo que repetir cuestionarios y tengo más asignaturas.
+
+Fin de este log.

@@ -1,0 +1,12 @@
+Las imágenes asociadas a esta tarea estarán en la carpeta llamada "12. Gray"
+
+
+Se nos propuso realizar un circuito que contara del 0 al 15 que además conviertiera esa secuencia en código Gray, es decir, que de forma binaria, el siguiente número tuviera solo 1 variación.
+Para ello montamos el circuito de la imagen 1 para que se mostrase a la vez la secuencia de 0a 15 y su equivalencia en Gray.
+
+Hicimos 2 contadores, sincrono y asincrono. Imagen 2 y 3.
+La diferencia es que a todos los biestables les llegue la misma señal de reloj cada vez (síncronos), o que dependan de la señal del biestable anterior (asincrono).
+
+Había un tercer método, pero no lo entendí.
+
+Fin de este log.
