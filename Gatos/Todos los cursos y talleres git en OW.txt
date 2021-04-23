@@ -1,0 +1,36 @@
+GIT etc en Openwebinars
+
+¡No seas un abuelo! Ya es hora de Git
+https://openwebinars.net/academia/portada/no-seas-abuelo-git/
+Aprende a realizar una migración de un sistema de Version Control comúnmente usado por Team Foundation Server al uso de Git.
+26min taller
+
+Gestión de documentación técnica con GitHub y Markdown Taller
+https://openwebinars.net/academia/portada/documentacion-github-markdown/
+Aprende a crear documentación técnica de forma fácil y profesional utilizando GitHub y Markdown para documentar un proyecto profesionalmente.
+1 hora y 17 minutos taller
+
+Curso de Gitflow profesi
+Aprende Gitflow para conseguir trabajar de forma eficiente, eficaz y con un alto grado de calidad en equipos usando Git como sistema de control de versiones.
+1 hora y 16 minutos
+
+Crea tu propio Git Portable
+https://openwebinars.net/academia/portada/git-portable/
+En este taller veremos como descargar y desplegar Bitbucket pero haciéndolo portable para que te lo puedas llevar a cualquier máquina.
+44 minutos y 1 segundo, taller, Docker+Git
+
+Curso de Git
+https://openwebinars.net/academia/portada/git/
+Aprende a dominar GIT, usando la línea de comandos, lo que permite desenvolvernos con GIT en cualquier entorno para convertirte en un profesional.
+2 horas y 52 minutos
+
+Mejores prácticas para la creación de documentación técnica Taller
+https://openwebinars.net/academia/portada/taller-documentacion-tecnica/
+Aprende a crear documentación técnica de forma profesional conociendo las mejores prácticas para la escritura y mejora de la experiencia de usuario, haz que tu documentación sirva para algo.
+1 hora y 1 minuto,taller
+
+
+
+
+
+
